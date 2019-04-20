@@ -4,7 +4,7 @@ Release:        0.1rc2%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
-URL:            https://github.com/ferdnyc/rfpkgdb-cli
+URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
 Source0:        %{url}/archive/v%{version}rc2/%{name}-%{version}rc2.tar.gz
 Patch0:         py3.patch
 
