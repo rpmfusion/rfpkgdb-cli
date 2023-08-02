@@ -1,6 +1,6 @@
 Name:           rfpkgdb-cli
 Version:        2.15.0
-Release:        0.13rc2%{?dist}
+Release:        0.14rc2%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
@@ -55,6 +55,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 2.15.0-0.14rc2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
+
 * Sat Jul 08 2023 Leigh Scott <leigh123linux@gmail.com> - 2.15.0-0.13rc2
 - Rebuilt for Python 3.12
 
