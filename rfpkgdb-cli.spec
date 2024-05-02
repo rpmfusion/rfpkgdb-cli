@@ -1,12 +1,11 @@
 Name:           rfpkgdb-cli
-Version:        2.15.0
-Release:        0.15rc2%{?dist}
+Version:        2.15.1
+Release:        1%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
 URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
-Source0:        %{url}/archive/v%{version}rc2/%{name}-%{version}rc2.tar.gz
-Patch0:         py3.patch
+Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 
@@ -35,7 +34,7 @@ as requesting new ACL for new packages.
 It also allows you to orphan and/or retire your package(s).
 
 %prep
-%autosetup -p1 -n %{name}-%{version}rc2
+%autosetup -p1 -n %{name}-%{version}
 
 
 %build
@@ -55,6 +54,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Thu May 02 2024 Sérgio Basto <sergio@serjux.com> - 2.15.1-1
+- Update rfpkgdb-cli to 2.15.1
+
 * Sun Feb 04 2024 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 2.15.0-0.15rc2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
 
