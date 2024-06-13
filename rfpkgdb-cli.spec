@@ -1,6 +1,6 @@
 Name:           rfpkgdb-cli
 Version:        2.15.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
@@ -54,6 +54,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Thu Jun 13 2024 Leigh Scott <leigh123linux@gmail.com> - 2.15.1-2
+- Rebuilt for Python 3.13
+
 * Thu May 02 2024 Sérgio Basto <sergio@serjux.com> - 2.15.1-1
 - Update rfpkgdb-cli to 2.15.1
 
