@@ -1,6 +1,6 @@
 Name:           rfpkgdb-cli
-Version:        2.15.1
-Release:        4%{?dist}
+Version:        2.15.2
+Release:        1%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
@@ -12,13 +12,13 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
-BuildRequires:  python3-fedora
-BuildRequires:  python3-bugzilla
-BuildRequires:  koji
+#BuildRequires:  python3-rpmfusion
+#BuildRequires:  python3-bugzilla
+#BuildRequires:  koji
 
 
-Requires(post): python3-fedora
-Requires(post): python3-requests
+Requires:       python3-fedora
+Requires:       python3-requests
 Requires:       python3-bugzilla
 Requires:       python3-koji
 Requires:       python3-beautifulsoup4
@@ -54,6 +54,10 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Thu Mar 20 2025 Sérgio Basto <sergio@serjux.com> - 2.15.2-1
+- Update rfpkgdb-cli to 2.15.2
+- python3-rpmfusion replaces python3-fedora
+
 * Tue Jan 28 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 2.15.1-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_42_Mass_Rebuild
 
