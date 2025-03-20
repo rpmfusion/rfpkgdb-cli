@@ -1,11 +1,12 @@
 Name:           rfpkgdb-cli
 Version:        2.15.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
 URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch1:         0001-Requires-an-argument.patch
 
 BuildArch:      noarch
 
@@ -54,6 +55,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Thu Mar 20 2025 Sérgio Basto <sergio@serjux.com> - 2.15.2-2
+- Requires an argument to rfpkgdb-cli
+
 * Thu Mar 20 2025 Sérgio Basto <sergio@serjux.com> - 2.15.2-1
 - Update rfpkgdb-cli to 2.15.2
 - python3-rpmfusion replaces python3-fedora

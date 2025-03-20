@@ -1,0 +1,25 @@
+From 21de76472308ed3b7098f3dcbb32f7709eca5853 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9rgio=20M=2E=20Basto?= <sergio@serjux.com>
+Date: Thu, 20 Mar 2025 14:28:03 +0000
+Subject: [PATCH] Requires an argument
+
+---
+ rfpkgdb2client/cli.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rfpkgdb2client/cli.py b/rfpkgdb2client/cli.py
+index 10f9770..192a39b 100644
+--- a/rfpkgdb2client/cli.py
++++ b/rfpkgdb2client/cli.py
+@@ -226,7 +226,7 @@ def setup_parser():
+     parser.add_argument('--kojihuburl', default=rfpkgdb2client.KOJI_HUB,
+                         help="Base url of the koji-hub instance to query.")
+ 
+-    subparsers = parser.add_subparsers(title='actions')
++    subparsers = parser.add_subparsers(title='actions', required=True)
+ 
+     # ACL
+     parser_acl = subparsers.add_parser(
+-- 
+2.48.1
+
