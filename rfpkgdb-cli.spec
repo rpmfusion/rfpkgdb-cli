@@ -1,15 +1,13 @@
 Name:           rfpkgdb-cli
-Version:        2.15.2
-Release:        2%{?dist}
+Version:        2.15.3
+Release:        1%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
 URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-Patch1:         0001-Requires-an-argument.patch
 
 BuildArch:      noarch
-
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -17,8 +15,7 @@ BuildRequires:  python3-setuptools
 #BuildRequires:  python3-bugzilla
 #BuildRequires:  koji
 
-
-Requires:       python3-fedora
+Requires:       python3-rpmfusion
 Requires:       python3-requests
 Requires:       python3-bugzilla
 Requires:       python3-koji
@@ -37,24 +34,29 @@ It also allows you to orphan and/or retire your package(s).
 %prep
 %autosetup -p1 -n %{name}-%{version}
 
+%generate_buildrequires
+%pyproject_buildrequires -p
 
 %build
-%py3_build
+%pyproject_wheel
 
 
 %install
-%py3_install
+%pyproject_install
 
 
 %files
 %doc README.rst LICENSE
 %{python3_sitelib}/rfpkgdb2client/
-%{python3_sitelib}/rfpkgdb_cli*.egg-info
+%{python3_sitelib}/rfpkgdb_cli*.dist-info
 %{_bindir}/rfpkgdb-cli
 %{_bindir}/rfpkgdb-admin
 
 
 %changelog
+* Sun May 25 2025 Sérgio Basto <sergio@serjux.com> - 2.15.3-1
+- Update to 2.15.3
+
 * Thu Mar 20 2025 Sérgio Basto <sergio@serjux.com> - 2.15.2-2
 - Requires an argument to rfpkgdb-cli
 
