@@ -1,11 +1,12 @@
 Name:           rfpkgdb-cli
 Version:        2.15.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
 URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch1:         0001-Also-requires-an-argument-on-admin.py.patch
 
 BuildArch:      noarch
 
@@ -54,6 +55,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Thu Dec 11 2025 Sérgio Basto <sergio@serjux.com> - 2.15.3-3
+- Also requires an argument on admin.py
+
 * Sun Jul 27 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 2.15.3-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_43_Mass_Rebuild
 

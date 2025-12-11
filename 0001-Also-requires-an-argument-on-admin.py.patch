@@ -1,0 +1,25 @@
+From 8b4620e5d720458ec41ba3d60503e50a89b8f4b2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9rgio=20M=2E=20Basto?= <sergio@serjux.com>
+Date: Thu, 11 Dec 2025 14:19:57 +0000
+Subject: [PATCH] Also requires an argument on admin.py
+
+---
+ rfpkgdb2client/admin.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rfpkgdb2client/admin.py b/rfpkgdb2client/admin.py
+index b1c206e..2c073f2 100644
+--- a/rfpkgdb2client/admin.py
++++ b/rfpkgdb2client/admin.py
+@@ -71,7 +71,7 @@ def setup_parser():
+     parser.add_argument('--bzurl', default=rfpkgdb2client.BZ_URL,
+                         help="Base url of the bugzilla instance to query.")
+ 
+-    subparsers = parser.add_subparsers(title='actions')
++    subparsers = parser.add_subparsers(title='actions', required=True)
+ 
+     # LIST
+     parser_list = subparsers.add_parser(
+-- 
+2.52.0
+
