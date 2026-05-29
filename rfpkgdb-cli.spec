@@ -1,11 +1,13 @@
 Name:           rfpkgdb-cli
 Version:        2.15.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
 URL:            https://github.com/rpmfusion-infra/rfpkgdb-cli
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch1:         0001-Fix-UserWarning-pkg_resources-is-deprecated.patch
+Patch2:         0002-Fix-pyproject-readme-filename-and-license-metadata.patch
 
 BuildArch:      noarch
 
@@ -54,6 +56,10 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Fri May 29 2026 Sérgio Basto <sergio@serjux.com> - 2.15.4-2
+- Fix UserWarning: pkg_resources is deprecated
+- Fix pyproject readme filename and license metadata
+
 * Sun Feb 08 2026 Sérgio Basto <sergio@serjux.com> - 2.15.4-1
 - Update rfpkgdb-cli to 2.15.4
 

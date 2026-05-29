@@ -1,0 +1,39 @@
+From cbe151fc4d81f4f49e67ca9bc62fb3728dd8da63 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9rgio=20M=2E=20Basto?= <sergio@serjux.com>
+Date: Fri, 29 May 2026 19:13:09 +0100
+Subject: [PATCH 2/2] Fix pyproject readme filename and license metadata
+
+---
+ pyproject.toml | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 2d4cca8..9a6c8aa 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
+ name = "rfpkgdb-cli"
+ version = "2.15.3"
+ description = "A command line tool to access the Rpmfusion Package Database."
+-readme = "README.md"  # Se tiveres
+-license = { text = "GPLv2+" }
++readme = "README.rst"
++license = "GPL-2.0-or-later"
+ authors = [
+   { name = "Pierre-Yves Chibon", email = "pingou@pingoured.fr" },
+ ]
+@@ -28,10 +28,8 @@ classifiers = [
+   "Development Status :: 5 - Production/Stable",
+   "Environment :: Console",
+   "Intended Audience :: Developers",
+-  "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+   "Operating System :: OS Independent",
+-  "Programming Language :: Python :: 2.6",
+-  "Programming Language :: Python :: 2.7",
++  "Programming Language :: Python :: 3",
+   "Topic :: Software Development :: Libraries"
+ ]
+ 
+-- 
+2.54.0
+
