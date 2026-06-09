@@ -1,6 +1,6 @@
 Name:           rfpkgdb-cli
 Version:        2.15.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A CLI for pkgdb
 
 License:        GPLv2+
@@ -56,6 +56,9 @@ It also allows you to orphan and/or retire your package(s).
 
 
 %changelog
+* Tue Jun 09 2026 Leigh Scott <leigh123linux@gmail.com> - 2.15.4-3
+- Rebuild for python-3.15
+
 * Fri May 29 2026 Sérgio Basto <sergio@serjux.com> - 2.15.4-2
 - Fix UserWarning: pkg_resources is deprecated
 - Fix pyproject readme filename and license metadata
